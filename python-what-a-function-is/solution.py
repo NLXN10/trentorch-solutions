@@ -1,0 +1,28 @@
+def is_even(n: int) -> bool:
+    """
+    Return True if n is even, False otherwise.
+    """
+    return n %  2 == 0
+    pass
+
+
+def greet_formal(name: str, title: str) -> str:
+    """
+    Return a greeting string in the exact form:
+      "Good day, {title} {name}."
+    Example: greet_formal("Dr.", "Smith.") -> "Good day, Dr. Smith."
+    """
+    return f"Good day, {title} {name}."
+    pass
+
+
+def apply_twice(func, value):
+    """
+    Call `func` on `value`, then call `func` again on the result
+    of that first call. Return the final result.
+    Example: apply_twice(lambda x: x + 1, 5) -> 7
+    """
+    first_result = func(value)
+    final_call = func(first_result)
+    return final_call
+    pass
